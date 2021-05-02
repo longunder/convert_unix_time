@@ -1,6 +1,8 @@
 <h1>UnixTime変換ツール</h1>
 <h2>UnixTimeを日時(JST)に変換します。</h2>
 <br>
-UnixTime：<input type="text" name="unix_time"><br>
-<br>
-<%= link_to "変換する", result_path, class: "btn btn-primary" %>
+UnixTime：
+<%= form_with model: @unix_time, url: { action: :result }, local: true do |f| %>
+  <%= f.number_field :unix_time_value %>
+  <%= f.submit "変換する", class: "btn btn-primary" %>
+<% end %>

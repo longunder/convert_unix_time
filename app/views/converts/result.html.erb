@@ -1,7 +1,7 @@
 <h1>変換結果</h1>
 <h2>変換結果を表示します。</h2>
 <br>
-UnixTime：<br>
-日時（JST）：<br>
+UnixTime：<%= @unix_time.unix_time_value %><br>
+日時(JST)： <%= Time.at(@unix_time.unix_time_value.to_i) %><br>
 <br>
 <%= link_to "戻る", root_path, class: "btn btn-primary" %>
