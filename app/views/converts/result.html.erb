@@ -1,7 +1,8 @@
-<h1>変換結果</h1>
-<h2>変換結果を表示します。</h2>
+<h1>UnixTime変換ツール</h1>
 <br>
-UnixTime：<%= @unix_time.unix_time_value %><br>
-日時(JST)： <%= Time.at(@unix_time.unix_time_value.to_i) %><br>
+<p>変換結果を表示します。</p>
 <br>
-<%= link_to "戻る", root_path, class: "btn btn-primary" %>
+<p>UnixTime：<%= @unix_time.unix_time_value %></p><br>
+<p>日時(JST)： <%= Time.at(@unix_time.unix_time_value.to_i) %></p>
+<br>
+<div><%= link_to "戻る", root_path, class: "btn btn-primary" %></div>
